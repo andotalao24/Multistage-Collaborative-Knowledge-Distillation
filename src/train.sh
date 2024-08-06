@@ -1,0 +1,24 @@
+python -u train_eval.py \
+--model_name_or_path t5-base \
+--predict_with_generate true \
+--checkpointing_steps epoch \
+--tokenizer_name t5-base \
+--train_file "" \
+--validation_file "" \
+--max_target_length 512 \
+--val_max_target_length 512 \
+--per_device_train_batch_size 2 \
+--per_device_eval_batch_size 8 \
+--gradient_accumulation_steps 16 \
+--learning_rate 3e-4 \
+--num_train_epochs 20 \
+--eval_epoch 2 \
+--save_epoch 2 \
+--do_train 1 \
+--source_prefix "" \
+--output_dir "" \
+--save_state 1 \
+--source_lang unparsed \
+--target_lang unlabeled \
+--report_to wandb \
+--with_tracking
