@@ -41,8 +41,8 @@ python -u train_eval.py \
 ```
 
 1. Randomly split pseudolabels into halves, e.g., dataset A and dataset B.
-2. For one student model, set the train_file as path to the dataset A and the validation_file as dataset B. Specify the output_dir where the model's predictions on the validation file are stored.
-For the other student model, simply set the train_file as dataset B and the validation_file as dataset A. For further iterations, collect the model's output predictions (i.e., relabeled dataset A and B) and repeat the above steps.
+2. For one student model, set the ``train_file`` as path to the dataset A and the ``validation_file`` as dataset B. Specify the ``output_dir`` where the model's predictions on the validation file are stored.
+For the other student model, simply set the ``train_file`` as dataset B and the ``validation_file`` as dataset A. For further iterations, collect the model's output predictions (i.e., relabeled dataset A and B) and repeat the above steps.
 You can also modify the run.sh and further write another sh file like the following to automate the above iterations,
 
 ```
